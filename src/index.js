@@ -8,7 +8,7 @@ import React from 'react'
 const renderApp = (NextApp) => {
   render(
     <AppContainer>
-    <NextApp />
+      <NextApp />
     </AppContainer>,
     document.querySelector('[data-js="app"]')
   )

@@ -3,7 +3,6 @@
 const path = require('path')
 const webpack = require('webpack')
 
-
 module.exports = {
   mode: 'development',
 
@@ -28,6 +27,13 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        exclude: /node_modules/,
+        include: /src/,
+        loader: 'standard-loader'
+      },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
